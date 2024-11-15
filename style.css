@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    width: 100%; /* Ensure the body takes full width */
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #111;
+    color: #fff;
+    overflow: hidden;
+  }
+  
+  .weather-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100vw; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    transition: background-image 0.5s ease-in-out;
+    background-size: cover; /* Ensures the image covers the entire area */
+    background-position: center; /* Center the background image */
+    background-attachment: fixed; /* Fixed background for a parallax effect */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .weather-display h2 {
+    font-size: 3em;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+  }
+  
+  .weather-display p {
+    font-size: 1.4em;
+    margin: 8px 0;
+    font-weight: 300;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  .city-form {
+    display: flex;
+    flex-direction: column; /* Stack input and button vertically */
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  input[type="text"] {
+    padding: 12px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    margin-bottom: 15px; /* Add space between input and button */
+    width: 250px;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #333;
+    transition: background-color 0.3s ease;
+  }
+  
+  input[type="text"]:focus {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  
+  button {
+    padding: 12px 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #ff8c00;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  button:hover {
+    background-color: #e67e00;
+    transform: scale(1.05);
+  }
+  
+  button:active {
+    transform: scale(1);
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  @media (max-width: 768px) {
+    .weather-display h2 {
+      font-size: 2.5em;
+    }
+  
+    .weather-display p {
+      font-size: 1.1em;
+    }
+  
+    input[type="text"] {
+      width: 200px;
+      font-size: 16px;
+    }
+  
+    button {
+      padding: 10px 15px;
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .weather-display h2 {
+      font-size: 2em;
+    }
+  
+    .weather-display p {
+      font-size: 1em;
+    }
+  
+    input[type="text"] {
+      width: 180px;
+      font-size: 14px;
+    }
+  
+    button {
+      padding: 8px 12px;
+      font-size: 14px;
+    }
+  }
+  
